@@ -1,0 +1,13 @@
+# robots.txt for Ace Table Tennis Academy
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /temp/
+Disallow: /cgi-bin/
+
+# Sitemap location
+Sitemap: https://acetabletennisacademy.co.za/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10 

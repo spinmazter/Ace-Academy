@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournaments - Ace Table Tennis Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tournaments.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="HeaderFooterManager.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Header will be inserted here -->
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="tournament-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Tournament Circuit</h1>
+            <p class="hero-subtitle">Compete at the Highest Level</p>
+            <a href="#tournaments" class="cta-button">View Tournaments</a>
+        </div>
+    </section>
+
+    <!-- Tournament Overview -->
+    <section class="tournament-overview" id="tournaments">
+        <div class="container">
+            <div class="section-header">
+                <h2>Major Tournaments</h2>
+                <p>Prestigious competitions where our athletes showcase their skills</p>
+            </div>
+            <div class="tournament-grid">
+                <div class="tournament-card">
+                    <div class="tournament-banner sa-games">
+                        <i class="fas fa-trophy"></i>
+                        <h3>South Africa Games</h3>
+                    </div>
+                    <div class="tournament-content">
+                        <ul>
+                            <li><i class="fas fa-calendar"></i> Annual Event</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Multiple Venues</li>
+                            <li><i class="fas fa-users"></i> National Level</li>
+                            <li><i class="fas fa-star"></i> Premier Tournament</li>
+                        </ul>
+                        <p class="tournament-description">The most prestigious national tournament featuring top athletes from across South Africa.</p>
+                        <a href="#register" class="tournament-btn">Register Interest</a>
+                    </div>
+                </div>
+
+                <div class="tournament-card">
+                    <div class="tournament-banner gn-open">
+                        <i class="fas fa-medal"></i>
+                        <h3>Gauteng North Open</h3>
+                    </div>
+                    <div class="tournament-content">
+                        <ul>
+                            <li><i class="fas fa-calendar"></i> Bi-annual</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Pretoria</li>
+                            <li><i class="fas fa-users"></i> Provincial Level</li>
+                            <li><i class="fas fa-star"></i> Ranking Points</li>
+                        </ul>
+                        <p class="tournament-description">Major provincial tournament with opportunities for national ranking points.</p>
+                        <a href="#register" class="tournament-btn">Register Interest</a>
+                    </div>
+                </div>
+
+                <div class="tournament-card">
+                    <div class="tournament-banner gn-closed">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Gauteng North Closed</h3>
+                    </div>
+                    <div class="tournament-content">
+                        <ul>
+                            <li><i class="fas fa-calendar"></i> Annual</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Pretoria</li>
+                            <li><i class="fas fa-users"></i> Provincial Level</li>
+                            <li><i class="fas fa-star"></i> Elite Competition</li>
+                        </ul>
+                        <p class="tournament-description">Exclusive tournament for top-ranked players in the Gauteng North region.</p>
+                        <a href="#register" class="tournament-btn">Register Interest</a>
+                    </div>
+                </div>
+
+                <div class="tournament-card">
+                    <div class="tournament-banner jhb-open">
+                        <i class="fas fa-award"></i>
+                        <h3>Johannesburg Open</h3>
+                    </div>
+                    <div class="tournament-content">
+                        <ul>
+                            <li><i class="fas fa-calendar"></i> Annual</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Johannesburg</li>
+                            <li><i class="fas fa-users"></i> Open Tournament</li>
+                            <li><i class="fas fa-star"></i> All Levels</li>
+                        </ul>
+                        <p class="tournament-description">Popular open tournament attracting players from all skill levels.</p>
+                        <a href="#register" class="tournament-btn">Register Interest</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tournament Success -->
+    <section class="tournament-success">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Champions</h2>
+                <p>Recent achievements from our academy athletes</p>
+            </div>
+            <div class="success-grid">
+                <div class="success-card">
+                    <img src="https://raw.githubusercontent.com/spinmazter/AcademyKuda/main/img/1b.jpg" alt="Tournament Champion">
+                    <div class="success-content">
+                        <h3>Imaan F.</h3>
+                        <p class="achievement">Gold - SA Games 2023</p>
+                        <p class="division">U18 Singles Division</p>
+                    </div>
+                </div>
+                <div class="success-card">
+                    <img src="https://raw.githubusercontent.com/spinmazter/AcademyKuda/main/img/27.jpg" alt="Tournament Champion">
+                    <div class="success-content">
+                        <h3>Sazi N.</h3>
+                        <p class="achievement">Champion - GN Open 2023</p>
+                        <p class="division">Senior Division</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="tournament-registration" id="register">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tournament Registration</h2>
+                <p>Express your interest in upcoming tournaments</p>
+            </div>
+            <div class="registration-container">
+                <form id="tournament-registration">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tournament">Tournament Interest</label>
+                        <select id="tournament" name="tournament" required>
+                            <option value="">Select Tournament</option>
+                            <option value="sa-games">South Africa Games</option>
+                            <option value="gn-open">Gauteng North Open</option>
+                            <option value="gn-closed">Gauteng North Closed</option>
+                            <option value="jhb-open">Johannesburg Open</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Playing Experience</label>
+                        <textarea id="experience" name="experience" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Registration</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <!-- Footer will be inserted here -->
+    </footer>
+
+    <script>
+        document.getElementById('tournament-registration').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const tournament = document.getElementById('tournament').value;
+            const experience = document.getElementById('experience').value;
+            
+            const emailBody = `
+Tournament Registration Interest
+
+Personal Information:
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+
+Tournament Interest: ${tournament}
+
+Playing Experience:
+${experience}
+            `;
+            
+            const mailtoLink = `mailto:kudakwashe914@gmail.com?subject=Tournament Registration - ${name}&body=${encodeURIComponent(emailBody)}`;
+            
+            window.location.href = mailtoLink;
+            
+            this.reset();
+            
+            alert('Opening your email client to send the registration...');
+        });
+    </script>
+</body>
+</html> 

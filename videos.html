@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Videos - Ace Table Tennis Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="videos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+    <script src="HeaderFooterManager.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Header will be inserted here -->
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="video-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Training Videos</h1>
+            <p class="hero-subtitle">Watch and Learn from Our Champions</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Training Videos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Techniques</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Hours</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="video-intro">
+                <h2 class="section-title">Training Videos Gallery</h2>
+                <p class="section-subtitle">Explore our collection of professional training sessions and techniques</p>
+            </div>
+
+            <div class="video-filters">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-play-circle"></i>
+                    <span>All Videos</span>
+                </button>
+                <button class="filter-btn" data-filter="technique">
+                    <i class="fas fa-table-tennis-paddle-ball"></i>
+                    <span>Techniques</span>
+                </button>
+                <button class="filter-btn" data-filter="training">
+                    <i class="fas fa-dumbbell"></i>
+                    <span>Training</span>
+                </button>
+                <button class="filter-btn" data-filter="footwork">
+                    <i class="fas fa-shoe-prints"></i>
+                    <span>Footwork</span>
+                </button>
+            </div>
+
+            <!-- Featured Video Player -->
+            <div class="featured-video-container">
+                <div class="featured-player">
+                    <video id="featured-player" playsinline controls>
+                        <source src="" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-info">
+                    <h3 id="video-title">Select a video to play</h3>
+                    <p id="video-description">Click on any video thumbnail below to start watching</p>
+                </div>
+            </div>
+
+            <!-- Video Grid -->
+            <div class="video-grid" id="video-grid">
+                <!-- Videos will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <!-- Footer will be inserted here -->
+    </footer>
+
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+    <script>
+        // Video data
+        const videos = [
+            {
+                video: 'https://raw.githubusercontent.com/spinmazter/AcademyKuda/main/videos/VID_20240406_100542.mp4',
+                title: 'Imaan High Performance',
+                description: 'Pushing limits through precision and power',
+                category: 'technique'
+            },
+            {
+                video: 'https://github.com/spinmazter/AcademyKuda/raw/main/videos/2.mp4',
+                title: 'Derick Endurance Training',
+                description: 'Building stamina and mental resilience',
+                category: 'training'
+            },
+            {
+                video: 'https://github.com/spinmazter/AcademyKuda/raw/main/videos/3.mp4',
+                title: 'Madelize Imaan Machine',
+                description: 'Advanced technique and precision training',
+                category: 'technique'
+            },
+            {
+                video: 'https://github.com/spinmazter/AcademyKuda/raw/main/videos/4.mp4',
+                title: 'Aditi Machine Training',
+                description: 'Developing consistency and technical skills',
+                category: 'training'
+            },
+            {
+                video: 'https://github.com/spinmazter/AcademyKuda/raw/main/videos/5.mp4',
+                title: 'Sazi Machine Technique',
+                description: 'Mastering advanced table tennis skills',
+                category: 'technique'
+            },
+            {
+                video: 'https://github.com/spinmazter/AcademyKuda/raw/main/videos/6.mp4',
+                title: 'Imaan Franco Technique',
+                description: 'Exploring advanced Franco-style techniques',
+                category: 'technique'
+            },
+            {
+                video: 'https://github.com/spinmazter/AcademyKuda/raw/main/videos/2.mp4',
+                title: 'Derick Footwork Mastery',
+                description: 'Perfecting footwork and movement patterns',
+                category: 'footwork'
+            },
+            {
+                video: 'https://github.com/spinmazter/AcademyKuda/raw/main/videos/11.mp4',
+                title: 'Aditi Footwork Precision',
+                description: 'Developing agile and strategic footwork',
+                category: 'footwork'
+            },
+            {
+                video: 'https://github.com/spinmazter/AcademyKuda/raw/main/videos/10.mp4',
+                title: 'Madelize Franco Style',
+                description: 'Exploring unique Franco-inspired techniques',
+                category: 'technique'
+            }
+        ];
+
+        // Initialize featured video player
+        const player = new Plyr('#featured-player', {
+            controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen'],
+            settings: ['captions', 'quality', 'speed'],
+            quality: { default: 720, options: [4320, 2880, 2160, 1440, 1080, 720, 576, 480, 360, 240] }
+        });
+
+        // Function to play selected video
+        function playVideo(index) {
+            const video = videos[index];
+            const videoElement = document.querySelector('#featured-player');
+            
+            // Update video source
+            videoElement.src = video.video;
+            videoElement.load(); // Important: reload the video with new source
+            
+            // Update video information
+            document.getElementById('video-title').textContent = video.title;
+            document.getElementById('video-description').textContent = video.description;
+            
+            // Play the video
+            player.play().catch(error => {
+                console.log("Error playing video:", error);
+            });
+            
+            // Scroll to player
+            document.querySelector('.featured-video-container').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Function to create video thumbnails
+        function createVideoThumbnails() {
+            const grid = document.getElementById('video-grid');
+            
+            videos.forEach((video, index) => {
+                const item = document.createElement('div');
+                item.className = 'video-item';
+                item.setAttribute('data-category', video.category);
+                
+                item.innerHTML = `
+                    <div class="video-card" onclick="playVideo(${index})">
+                        <div class="video-thumbnail">
+                            <video src="${video.video}" muted preload="metadata"></video>
+                            <div class="play-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h3>${video.title}</h3>
+                            <p>${video.description}</p>
+                        </div>
+                    </div>
+                `;
+                
+                grid.appendChild(item);
+
+                // Set thumbnail preview
+                const thumbnailVideo = item.querySelector('video');
+                thumbnailVideo.addEventListener('loadeddata', function() {
+                    thumbnailVideo.currentTime = 1;
+                });
+            });
+        }
+
+        // Initialize gallery when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            createVideoThumbnails();
+            
+            // Load first video by default
+            if(videos.length > 0) {
+                const videoElement = document.querySelector('#featured-player');
+                videoElement.src = videos[0].video;
+                document.getElementById('video-title').textContent = videos[0].title;
+                document.getElementById('video-description').textContent = videos[0].description;
+            }
+        });
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                document.querySelectorAll('.video-item').forEach(item => {
+                    if(filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
