@@ -170,12 +170,30 @@ class HeaderFooterManager {
         const dropdowns = document.querySelectorAll('.dropdown');
         
         dropdowns.forEach(dropdown => {
+            const dropdownLink = dropdown.querySelector('.nav-link');
+            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+            
             // For mobile devices
-            dropdown.addEventListener('click', (e) => {
+            dropdownLink.addEventListener('click', (e) => {
                 if (window.innerWidth <= 968) {
                     e.preventDefault();
                     dropdown.classList.toggle('active');
                 }
+            });
+
+            // Handle clicks on dropdown menu items
+            dropdownMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 968) {
+                        // Close the mobile menu after clicking a link
+                        const hamburger = document.querySelector('.hamburger');
+                        const navMenu = document.querySelector('.nav-menu');
+                        if (hamburger && navMenu) {
+                            hamburger.classList.remove('active');
+                            navMenu.classList.remove('active');
+                        }
+                    }
+                });
             });
 
             // For desktop hover
