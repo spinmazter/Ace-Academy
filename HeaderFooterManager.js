@@ -185,13 +185,8 @@ class HeaderFooterManager {
             dropdownMenu.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     if (window.innerWidth <= 968) {
-                        // Close the mobile menu after clicking a link
-                        const hamburger = document.querySelector('.hamburger');
-                        const navMenu = document.querySelector('.nav-menu');
-                        if (hamburger && navMenu) {
-                            hamburger.classList.remove('active');
-                            navMenu.classList.remove('active');
-                        }
+                        // Only close the dropdown menu, not the entire mobile menu
+                        dropdown.classList.remove('active');
                     }
                 });
             });
