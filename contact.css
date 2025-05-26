@@ -3,8 +3,8 @@
     --primary-color: #4A90E2;
     --secondary-color: #2C3E50;
     --accent-color: #E74C3C;
-    --background-color: #F5F7FA;
-    --text-color: #2C3E50;
+    --background-color: #1a1f2e;
+    --text-color: #e8eaed;
     --light-gray: #95A5A6;
     --white: #ffffff;
     --transition: all 0.3s ease;
@@ -48,6 +48,7 @@
 .contact-info {
     padding: 4rem 0;
     background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .info-grid {
@@ -111,7 +112,8 @@
 /* Map Section */
 .map-section {
     padding: 4rem 0;
-    background-color: var(--white);
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .section-header {
@@ -141,6 +143,7 @@
 .contact-form {
     padding: 4rem 0;
     background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .form-container {

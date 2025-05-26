@@ -58,7 +58,7 @@ class HeaderFooterManager {
                         <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/27697480306" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
@@ -93,7 +93,7 @@ class HeaderFooterManager {
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>kudakwashe914@gmail.com</span>
+                            <span><a href="mailto:kudakwashe914@gmail.com" style="color: inherit; text-decoration: none;">kudakwashe914@gmail.com</a></span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
